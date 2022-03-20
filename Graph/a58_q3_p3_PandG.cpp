@@ -50,11 +50,9 @@ while(k--){
                 printf("YES\n"); break;
             }
             Ch=false;
-            //X=q.front().F;
             while(!Gh.empty()){
             if(-Gh.back().F!=X+1)break;
             if(!bl[(X+1)%2][Gh.back().S.F][Gh.back().S.S]){
-               // printf("A");
             bl[(X+1)%2][Gh.back().S.F][Gh.back().S.S]=true;
             q.emplace(X+1,make_pair(Gh.back().S.F,make_pair(Gh.back().S.S,1)));
         }
