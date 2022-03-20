@@ -30,7 +30,8 @@ main(){
       if(B[i]==0){
         if(dfs(i,-1)){c=1; printf("YES\n");break;
         }
-    }}
+    }
+    }
     if(c==1)continue;
     printf("NO\n");
   }
