@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long dp[10001],n,k,A[10];
+main(){
+  ios_base::sync_with_stdio(false),cin.tie(0);
+  cin>>n>>k;
+  for(int i=0;i<k;++i)cin>>A[i];
+  dp[0]=1;
+  for(int i=1;i<=n;++i){
+    for(int j=0;j<k;++j){
+      if(i>=A[j]){dp[i]+=dp[i-A[j]]; dp[i]%=1000003;}
+    }
+  }
+  cout<<dp[n];
+}
